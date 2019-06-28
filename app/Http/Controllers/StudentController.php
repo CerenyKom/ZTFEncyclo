@@ -96,8 +96,7 @@ class StudentController extends Controller
         return DataTables::of($article)
             ->addColumn('action', function ($article) {
                 return
-                    '<a onclick="edit(' . $article->id . ')" class="btn btn-primary btn-xs"> <i class="fa fa-edit"></i> Modifier</a>'
-                    . '<a onclick="destroy(' . $article->id . ')" class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> Supprimer</a>';
+                    '<a onclick="edit(' . $article->id . ')" class="btn btn-primary btn-xs"> <i class="fa fa-edit"></i> visualiser</a>';
             })->make(true);
     }
 
