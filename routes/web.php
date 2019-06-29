@@ -11,6 +11,14 @@
 |
 */
 
+route::group(['namespace' => 'Admin', 'prefix' => 'Admin'],  function(){
+
+    route::resource('Student', 'StudentController');
+
+    route::resource('User', 'UserController');
+
+});
+
 Route::get('/', 'PageController@index')->name('home');
 
 route::get('student.api', 'StudentController@apiStudent')->name('student.api');
@@ -26,3 +34,12 @@ Route::get('/message', 'PageController@message')->name('message');
 Route::get('/testimonial', 'PageController@testimonial')->name('testimonial');
 
 Route::get('/activity', 'PageController@activity')->name('activity');
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

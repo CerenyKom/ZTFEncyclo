@@ -5,51 +5,7 @@
     <link href="css/pay.css" rel="stylesheet" type="text/css">
    <div id="w3l-payment-pg" class="w3l-payment-pg ">
 		<div class="container">
-            <h4 class="w3ls-inner-title">Gestion des Etudiants</h4>
-            <div class="content-wthree">
-				<div id="horizontalTab">
-					<ul class="resp-tabs-list">
-					  <li class="w3-pay-active">Enregistrer un nouvelle etudiant</li>
-					</ul>
-					<div class="resp-tabs-container">
-                        <div class="tab1 active">
-                            <form action="{{route("student.store")}}" method="post" class="agile_form">
-                                {{csrf_field()}}
-                                <div class="w3ls-text sec-left">
-                                    <label class="contact-form-w3ls">Entrer son mom</label>
-                                    <input placeholder="Entrer son mom" name="noms" type="text" required="">
-                                </div>
-                                <div class="w3ls-text sec-right">
-                                    <label class="contact-form-w3ls">Entrer son age spirituel</label>
-                                    <input placeholder="Entrer son age spirituel" name="agesp" type="text" required="">
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="w3ls-text sec-left">
-                                    <label class="contact-form-w3ls">Entrer son age</label>
-                                    <input placeholder="Entrer son age" name="age" type="text" required="">
-                                </div>
-                                <div class="w3ls-text sec-right">
-                                    <label class="contact-form-w3ls">Province Spirituel</label>
-                                    <input placeholder="Province Spirituel" name="province" type="text" required="">
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="w3ls-text sec-left">
-                                    <label class="contact-form-w3ls">Ville</label>
-                                    <input placeholder="Ville" name="ville" type="text" required="">
-                                </div>
-                                <div class="w3ls-text sec-right">
-                                    <label class="contact-form-w3ls">Matricule</label>
-                                    <input placeholder="Matricule" name="matricule" type="text" required="">
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="w3ls-pay-submit">
-                                    <input type="submit" value="Enregistrer">
-                                </div>
-                            </form>
-                        </div>
-					</div>
-		</div>
-	</div>
+            <h4 class="w3ls-inner-title">Liste des Etudiants</h4>
             <div class="well"></div>
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -61,8 +17,8 @@
                         <th>Matricule</th>
                         <th>Noms</th>
                         <th>Ville</th>
-                        <th>Age_Spirituel</th>
-                        <th>Province_Spirituel</th>
+                        <th>Age Spirituel</th>
+                        <th>Province Spirituel</th>
                         <th>Action</th>
                         </thead>
                         <tbody>
