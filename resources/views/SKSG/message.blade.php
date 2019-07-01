@@ -1,7 +1,7 @@
-
 @extends('layouts.app')
 
 @section('content')
+
     <div id="w3l-payment-pg" class="w3l-payment-pg ">
         <div class="container">
             <h4 class="w3ls-inner-title">Enseignement</h4>

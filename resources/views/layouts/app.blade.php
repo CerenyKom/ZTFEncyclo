@@ -8,9 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }} {{ isset($title) ? $title : '' }}</title>
+    <title> SKSG </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
 	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/app.css" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet">

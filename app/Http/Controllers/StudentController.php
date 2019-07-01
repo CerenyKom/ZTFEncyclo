@@ -16,7 +16,7 @@ class StudentController extends Controller
      */
     public function index(){
         $p = Student::all();
-        return view('ECSD.student', compact('p'));
+        return view('SKSG.student', compact('p'));
     }
 
     /**
@@ -43,7 +43,7 @@ class StudentController extends Controller
             'Matricule' => $request->matricule,
             'Province_Spirituel' => $request->province,
         ]);
-        return view("ECSD.student");
+        return view("SKSG.student");
     }
 
     /**

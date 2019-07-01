@@ -7,37 +7,42 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
 
+    public function home(){
+
+        return view('welcome');
+    }
+
     public function index()
     {
-        return view('welcome');
+        return view('SKSG.welcome');
     }
 
     public function student()
     {
-        return view('ECSD.student');
+        return view('SKSG.student');
     }
 
 
     public function session()
     {
-        return view('ECSD.session');
+        return view('SKSG.session');
     }
 
 
     public function activity()
     {
-        return view('ECSD.activity');
+        return view('SKSG.activity');
     }
 
 
     public function testimonial()
     {
-        return view('ECSD.testimonial');
+        return view('SKSG.testimonial');
     }
 
 
     public function message()
     {
-        return view('ECSD.message');
+        return view('SKSG.message');
     }
 }

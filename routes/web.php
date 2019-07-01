@@ -11,33 +11,29 @@
 |
 */
 
-route::group(['namespace' => 'Admin', 'prefix' => 'Admin'],  function(){
 
-    route::resource('Student', 'StudentController');
+Route::get('/', 'PageController@home')->name('home');
 
-    route::resource('User', 'UserController');
+Route::get('/SKSG', 'PageController@index')->name('SKSG');
 
+Route::group(['prefix' => 'SKSG'], function (){
+
+    Route::get('/student', 'PageController@student')->name('student');
+
+    Route::get('/session', 'PageController@session')->name('session');
+
+    Route::get('/message', 'PageController@message')->name('message');
+
+    Route::get('/testimonial', 'PageController@testimonial')->name('testimonial');
+
+    Route::get('/activity', 'PageController@activity')->name('activity');
 });
-
-Route::get('/', 'PageController@index')->name('home');
 
 route::get('student.api', 'StudentController@apiStudent')->name('student.api');
 
 Route::resource('student', 'StudentController');
 
-Route::get('/student', 'PageController@student')->name('student');
-
-Route::get('/session', 'PageController@session')->name('session');
-
-Route::get('/message', 'PageController@message')->name('message');
-
-Route::get('/testimonial', 'PageController@testimonial')->name('testimonial');
-
-Route::get('/activity', 'PageController@activity')->name('activity');
-
 Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix' => 'admin'], function () {

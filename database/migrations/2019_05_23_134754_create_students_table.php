@@ -19,9 +19,14 @@ class CreateStudentsTable extends Migration
             $table->string('Noms');
             $table->string('Age_Spirituel');
             $table->string('Ville');
+            $table->string('SituationMatrimoniale');
+            $table->string('Sexe');
             $table->string('Age');
+            $table->string('Competence');
+            $table->string('Cursus');
+            $table->string('Photo');
             $table->string('Matricule');
-            $table->string('Province_Spirituel');
+            $table->string('PaysOrigine');
             $table->timestamps();
         });
     }
